@@ -1,3 +1,3 @@
 def call (){
-    sh "trivy fs scan ."
+    sh "trivy fs ."
 }
