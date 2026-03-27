@@ -1,8 +1,8 @@
 def call (String ImageName, String ImageTag , String DockerUser) {
     withCredentials([usernamePassword(
-        credentialsId: "Docker",
-        variablePassword :"DockerPass",
-        variableUsername:"DockerUser")]) {
+        credentialsId : "Docker",
+        passwordVariable :"DockerPass",
+        usernameVariable :"DockerUser")]) {
             sh "docker login -u ${DockerUser} -p ${DockerPass}" 
         }
 
